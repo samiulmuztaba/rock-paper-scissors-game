@@ -1,0 +1,104 @@
+/* General Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #1a1a2e;
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Main Container */
+.main {
+    max-width: 400px;
+    background: #16213e;
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Heading */
+h1 {
+    font-size: 2.8rem;
+    margin: 0 0 20px;
+    color: #00d4ff;
+}
+
+/* Instruction */
+p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+/* Game Buttons */
+.buttons {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+}
+
+.buttons button {
+    font-size: 2.5rem;
+    padding: 15px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(145deg, #00d4ff, #0096c7);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 10px rgba(0, 212, 255, 0.4);
+}
+
+.buttons button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 212, 255, 0.6);
+}
+
+.buttons button:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* Replay Button */
+#replay {
+    display: none;
+    margin: 20px auto 0;
+    padding: 10px 30px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(145deg, #32ff7e, #2bde68);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+#replay:hover {
+    transform: scale(1.05);
+    background: linear-gradient(145deg, #2bde68, #28c359);
+}
+
+/* Score Section */
+.scores {
+    font-size: 1.1rem;
+    margin: 20px 0;
+    color: #00d4ff;
+}
+
+.scores span {
+    font-weight: bold;
+    color: #32ff7e;
+}
+
+/* Result Section */
+#winorlose {
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #ffde59;
+}
