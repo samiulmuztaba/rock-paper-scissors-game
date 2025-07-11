@@ -10,26 +10,19 @@ const winningScore = 5;
 
      
 //if you check console, you win because you viewed my repo :) 
-let computerTurn = computerPlay();
-console.log(toWinYouShould());
-
-function toWinYouShould() {
-  if (computerTurn == 'rock') {
-    return 'paper';
-  } else if (computerTurn == 'paper') {
-    return 'scissor';
-  } else { 
-    return 'rock';
-  }
-}
-
+let computerTurn = computerPlay()
+console.log(toWinYouShould(computerTurn))
 
 // code continues. . . .
 buttons.forEach((button) => {
-  button.addEventListener("click", () => {
+  button.addEventListener("click", (e) => {
+    // e.preventDefault()
     if (computerScore < winningScore && yourScore < winningScore) {
       const result = playRound(button.id, computerTurn);
       resultEL.textContent = result;
+      
+      computerTurn = computerPlay()
+      console.log(toWinYouShould(computerTurn))
 
       // Check for a winner
       if (yourScore === winningScore) {
@@ -54,6 +47,17 @@ function computerPlay() {
   // console.log(choices[randomChoice])
   return choices[randomChoice];
 }
+
+function toWinYouShould(computerTurn) {
+  if (computerTurn == 'rock') {
+    return 'paper';
+  } else if (computerTurn == 'paper') {
+    return 'scissor';
+  } else { 
+    return 'rock';
+  }
+}
+
 
 function playRound(playerSelection, computerSelection) {
   if (playerSelection === computerSelection) {
