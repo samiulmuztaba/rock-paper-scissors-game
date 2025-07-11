@@ -10,7 +10,7 @@ const winningScore = 5;
 
 
 //if you check console, you win because you viewed my repo :) 
-console.log(computerPlay())
+computerPlay();
 
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
@@ -38,6 +38,7 @@ replayButton.addEventListener("click", () => {
 function computerPlay() {
   const choices = ["rock", "paper", "scissor"];
   const randomChoice = Math.floor(Math.random() * choices.length);
+  console.log(choices[randomChoice]
   return choices[randomChoice];
 }
 
