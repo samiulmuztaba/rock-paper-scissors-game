@@ -8,6 +8,10 @@ let computerScore = 0;
 let yourScore = 0;
 const winningScore = 5;
 
+
+//if you check console, you win because you viewed my repo :) 
+console.log(computerPlay())
+
 buttons.forEach((button) => {
   button.addEventListener("click", () => {
     if (computerScore < winningScore && yourScore < winningScore) {
